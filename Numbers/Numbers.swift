@@ -29,7 +29,11 @@ class Numbers {
         case "minus":
             return firstNumber - secondNumber
         case "divide":
-            return firstNumber / secondNumber
+            if secondNumber == 0 {
+                return 0
+            }else {
+                return firstNumber / secondNumber
+            }
         default:
             return 0.0
         }

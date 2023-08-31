@@ -28,5 +28,15 @@ class NumbersTests: XCTestCase {
         let number = Numbers(firstNumber: 2.0, secondNumber: 2.0, processType: "divide")
         XCTAssertEqual(number.result(), 1.0)
     }
+    
+    func testDivideWithFirstOneZeroSecondOnePositiveNumbers() throws {
+        let number = Numbers(firstNumber: 0.0, secondNumber: 2.0, processType: "divide")
+        XCTAssertEqual(number.result(), 0.0)
+    }
+    
+    func testDivideWithSecondOneZeroFirstOnePositiveNumbers() throws {
+        let number = Numbers(firstNumber: 2.0, secondNumber: 0.0, processType: "divide")
+        XCTAssertEqual(number.result(), 0.0)
+    }
 
 }
