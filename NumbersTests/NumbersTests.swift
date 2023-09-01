@@ -39,4 +39,14 @@ class NumbersTests: XCTestCase {
         XCTAssertEqual(number.result(), 0.0)
     }
 
+    func testUnknownProcessType() throws {
+        let number = Numbers(firstNumber: 2, secondNumber: 3, processType: "unknown")
+        XCTAssertEqual(number.result(), 0)
+    }
+    
+    func testEmptyProcessType() throws {
+        let number = Numbers(firstNumber: 2, secondNumber: 3, processType: "")
+        XCTAssertEqual(number.result(), 0)
+    }
+    
 }

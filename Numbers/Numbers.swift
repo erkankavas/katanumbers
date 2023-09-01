@@ -35,7 +35,7 @@ class Numbers {
                 return firstNumber / secondNumber
             }
         default:
-            return 0.0
+            return 0
         }
         
         
